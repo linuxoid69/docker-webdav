@@ -3,10 +3,11 @@
 WEBDAV_USERNAME=${WEBDAV_USERNAME:-''}
 WEBDAV_PASSWORD=${WEBDAV_PASSWORD:-''}
 WEBDAV_SYMLINK_ENABLE=${WEBDAV_SYMLINK_ENABLE:-''}
+WEBDAV_SECRET_PATH=${WEBDAV_SECRET_PATH:-'/vault/secrets/config'}
 
-if [ -f /vault/secrets/webdav ]
+if [ -f "${WEBDAV_SECRET_PATH}" ]
 then
-    . /vault/secrets/webdav
+    . "${WEBDAV_SECRET_PATH}"
 fi
 
 if [ "${WEBDAV_USERNAME}" != "" ] && [ "${WEBDAV_PASSWORD}" != "" ]

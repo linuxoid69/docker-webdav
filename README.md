@@ -1,16 +1,17 @@
 # Webdav
 
-Команда запуска
+## Usage
 
 ```bash
 docker run -it --rm  -p 8080:8080  -v <your_data>:/var/www/localhost/htdocs ghcr.io/linuxoid69/webdav:latest
 ```
 
-Переменные окружения
+Environment variables
 
 ```bash
-WEBDAV_USERNAME=admin     - имя пользователя для доступа к webdav
-WEBDAV_PASSWORD=1234      - пароль
-WEBDAV_SYMLINK_ENABLE=yes - если нужно что бы nginx обрабатывал symlink
-WEBDAV_PORT=8080          - порт
+WEBDAV_USERNAME=admin     - username
+WEBDAV_PASSWORD=1234      - password
+WEBDAV_SYMLINK_ENABLE=yes - enable symlink
+WEBDAV_PORT=8080          - port
+WEBDAV_SECRET_PATH        - path to secret file (optional)
 ```
