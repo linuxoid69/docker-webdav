@@ -3,7 +3,7 @@
 Команда запуска
 
 ```bash
-docker run -it --rm  -p 8080:8080  -v <your_data>:/var/www/localhost/htdocs reg.netcitylife.ru/docker/webdav
+docker run -it --rm  -p 8080:8080  -v <your_data>:/var/www/localhost/htdocs ghcr.io/linuxoid69/webdav:latest
 ```
 
 Переменные окружения
